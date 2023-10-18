@@ -1,0 +1,18 @@
+Mikrotik Log2Graph, feito por Richard Ferreira <https://github.com/richardiwnl>
+
+Para a utilização do software, é necessário possuir as dependências instaladas, segue as instruções:
+
+$> python -m venv ./venv
+$> ./venv/Scripts/pip install -r dependencias.txt
+
+Para a leitura dos logs do Mikrotik, é necessário possuir um arquivo chamado tmplog.log no diretório raíz, também é necessário possuir o remote log no tópico account para a devida formatação dos logs
+
+Para a configuração de mapeamento dos nomes e IPs, é necessário a criação de um arquivo config.json no diretório raíz no seguinte formato:
+
+{
+    "Nome": {
+        "ip_address": "IP"
+    }
+}
+
+Após a configuração, execute o script com o comando [python src/log2graph.py] e assim o relatório de acessos será gerado.
